@@ -1,0 +1,50 @@
+{
+  "name": "alive-node-api",
+  "version": "1.0.0",
+  "description": "NodeJS + GraphQL API server for Alive",
+  "main": "start.js",
+  "engines": {
+    "node": ">=7.0",
+    "npm": ">=3.3 <4"
+  },
+  "dependencies": {
+    "express": "4.14.0",
+    "express-graphql": "0.5.4",
+    "express-jwt": "5.0.0",
+    "express-session": "1.15.2",
+    "graphiql": "0.7.8",
+    "graphql": "^0.10.5",
+    "graphql-relay": "^0.5.2",
+    "helmet": "3.12.1"
+  },
+  "scripts": {
+    "server": "rm -rf ./hmr && webpack --config webpack.dev.config.js",
+    "build": "rm -rf ./hmr && rm -rf ./prod && webpack --config webpack.prod.config.js",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ppanindre/alive-node-api.git"
+  },
+  "keywords": [
+    "graphql",
+    "node",
+    "alive"
+  ],
+  "author": "Alive Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ppanindre/alive-node-api/issues"
+  },
+  "homepage": "https://github.com/ppanindre/alive-node-api#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "start-server-webpack-plugin": "^2.2.5",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.3",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
